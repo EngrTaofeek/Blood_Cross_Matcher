@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Blood Cross Matcher</string>
+    <string name="welcome_title">Blood Cross Matcher</string>
+    <string name="email_hint">Enter your email address</string>
+    <string name="password_hint_text">Enter your password</string>
+    <string name="login_text">LOGIN</string>
+    <string name="sign_up_text">Click to Sign up</string>
+    <string name="welcome_signup_text">Welcome to Blood Cross Matcher</string>
+    <string name="fill_details">Fill in your account details</string>
+    <string name="name_hint">Enter your full name</string>
+    <string name="phone_number_hint">Enter your phone number</string>
+    <string name="confirm_password_hint">Confirm your password</string>
+    <string name="sign" />
+    <string name="sign_up">SIGN UP</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="nav_edit_profile">Edit Profile</string>
+    <string name="nav_donate">Donate blood</string>
+    <string name="nav_receive">Receive blood</string>
+    <string name="nav_view_match">View Match</string>
+    <string name="content_profile_header">Blood Donation Overview</string>
+    <string name="overview_text">" Blood donation is a voluntary procedure that can help save the lives of others. There are several types of blood donation, which help meet different medical needs."</string>
+    <string name="expectation">What to Expect?</string>
+    <string name="expect_text">"If you’ve decided to donate blood for a specific reason or you just want to help out, you may be curious about what to expect. Giving blood is a simple, safe way to make a big difference in people’s lives. Knowing what to expect before, during, and after you donate can help you prepare for the process.  "</string>
+    <string name="reason_why">How Donating Helps</string>
+    <string name="reason_why_text">"Every 2 seconds, someone in the United States needs blood. Donating blood can help:  People who go through disasters or emergency situations People who lose blood during major surgeries People who have lost blood because of a gastrointestinal bleed Women who have serious complications during pregnancy or childbirth People with cancer or severe anemia sometimes caused by thalassemia or sickle cell disease "</string>
+    <string name="donate_button">DONATE BLOOD</string>
+    <string name="receive_blood">RECEIVE BLOOD</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="phone_hint">Phone number</string>
+    <string name="age_hint">Age</string>
+    <string name="gender">Gender</string>
+    <string name="status">Status</string>
+    <string name="submit">SUBMIT</string>
+</resources>
