@@ -7,6 +7,9 @@ import static java.security.AccessController.getContext;
 
 public class DataManager {
    OpenHelper mdb;
+   public void testing(){
+       insertDataRegister("John@yahoo.com","heyhello");
+   }
     public void insertDataRegister(String email, String password){
        // OpenHelper dbHelper = new OpenHelper();
         SQLiteDatabase db = mdb.getReadableDatabase();
