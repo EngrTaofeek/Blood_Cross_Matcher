@@ -59,7 +59,7 @@ public class OpenHelper extends SQLiteOpenHelper {
 
 // Filter results WHERE "title" = 'My Title'
         String selection =  DatabaseContract.Authentication.COLUMN_EMAIL + " = ?" +
-                "," + DatabaseContract.Authentication.COLUMN_PASSWORD + " = ?";
+                " AND " + DatabaseContract.Authentication.COLUMN_PASSWORD + " = ?";
         String[] selectionArgs = { loginmail, loginPassword };
 
 // How you want the results sorted in the resulting Cursor

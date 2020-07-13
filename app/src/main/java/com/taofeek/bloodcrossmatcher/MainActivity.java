@@ -53,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
         return text;
     }
     public void logCheck() {
-        DataManager dm =new DataManager();
-        Boolean checkstat = dm.loginCheck(mLoginemail,mLoginpassword);
+        //DataManager dm =new DataManager();
+        OpenHelper mdb = new OpenHelper(this);
+        Boolean checkstat = mdb.loginCheck(mLoginemail,mLoginpassword);
         if (checkstat){
             Intent logintent = new Intent(MainActivity.this,Profile.class);
             startActivity(logintent);
