@@ -91,13 +91,41 @@
 
     <RadioGroup
         android:id="@+id/edit_profile_radio_group_gender"
-        android:layout_width="58dp"
+        android:layout_width="0dp"
         android:layout_height="38dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edit_profile_textview_gender"
         app:layout_constraintTop_toTopOf="@+id/edit_profile_textview_gender"
-        tools:visibility="visible" />
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MALE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="FEMALE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonMale"
+                app:layout_constraintTop_toTopOf="@+id/radioButtonMale" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RadioGroup>
 
     <TextView
         android:id="@+id/edit_profile_status_textview"
@@ -110,13 +138,42 @@
 
     <RadioGroup
         android:id="@+id/edit_profile_radio_group_status"
-        android:layout_width="34dp"
+        android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginStart="51dp"
         android:layout_marginLeft="51dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edit_profile_status_textview"
-        app:layout_constraintTop_toBottomOf="@+id/edit_profile_radio_group_gender" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_radio_group_gender" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonReceiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Receiver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonDonor"
+                app:layout_constraintTop_toTopOf="@+id/radioButtonDonor"
+                app:layout_constraintVertical_bias="0.454" />
+
+            <RadioButton
+                android:id="@+id/radioButtonDonor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RadioGroup>
 
     <Button
         android:id="@+id/edit_profile_submit_button"

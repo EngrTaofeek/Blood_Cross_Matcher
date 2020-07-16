@@ -1,6 +1,7 @@
 package com.taofeek.bloodcrossmatcher;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -9,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -53,6 +55,7 @@ public class Profile extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.profile, menu);
         return true;
     }
+
 
 
 }
