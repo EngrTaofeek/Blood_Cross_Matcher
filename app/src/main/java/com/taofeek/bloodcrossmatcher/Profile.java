@@ -1,5 +1,6 @@
 package com.taofeek.bloodcrossmatcher;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -9,6 +10,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
@@ -45,7 +47,33 @@ public class Profile extends AppCompatActivity {
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                switch (id){
+                    case R.id.nav_donate :
+                        Snackbar.make(findViewById(R.id.nav_view),"Donate", Snackbar.LENGTH_LONG).show();
+                        break;
+                    case R.id.nav_edit_profile:
+                        Intent editIntent = new Intent(Profile.this,EditProfile.class);
+                        startActivity(editIntent);
+
+                        break;
+                    case R.id.nav_match_viewer:
+                        Snackbar.make(findViewById(R.id.nav_view),"Blood match viewer", Snackbar.LENGTH_LONG).show();
+                        break;
+                    case R.id.nav_receiver:
+                        Snackbar.make(findViewById(R.id.nav_view),"Receiver", Snackbar.LENGTH_LONG).show();
+                        break;
+                    default:
+                        return true;
+                }
+                return true;
+            }
+        });
           }
+
 
 
 

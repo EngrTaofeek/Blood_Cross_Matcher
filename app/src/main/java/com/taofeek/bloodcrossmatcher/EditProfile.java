@@ -89,21 +89,12 @@ public class EditProfile extends AppCompatActivity implements AdapterView.OnItem
         mFemale = findViewById(R.id.radioButtonFemale);
         mDonor = findViewById(R.id.radioButtonDonor);
         mReceiver = findViewById(R.id.radioButtonReceiver);
-        String gender = getRadioButtonText(mGender);
-        String status = getRadioButtonText(mStatus);
+        String gender = "Male";
+        String status = "Receiver";
 
         ProfileOpenHelper mdb = new ProfileOpenHelper(this);
         mdb.insertData(name,email,number,age,blood_group,status,gender);
 
-
-
-    }
-    public String getRadioButtonText (RadioGroup radioGroup ){
-
-        int selectedId = radioGroup.getCheckedRadioButtonId();
-        RadioButton radioButton =  findViewById(selectedId);
-        String text = radioButton.getText().toString();
-        return text;
 
 
     }
