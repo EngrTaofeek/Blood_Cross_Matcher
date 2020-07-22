@@ -73,6 +73,61 @@ public class Profile extends AppCompatActivity {
             }
         });
           }
+    public void bloodmatcher (String bloodgroup) {
+        ProfileOpenHelper mdb = new ProfileOpenHelper(this);
+        switch (bloodgroup){
+            case "A+" :
+                String selectionAP = DatabaseContract.Profile.COLUMN_BLOOD_TYPE + " IN(?,?,?,?)" ;
+                String[] selectionArgsAP= {"A+", "A-" , "O+" , "O-"};
+                mdb.donorGetter(selectionAP,selectionArgsAP);
+                break;
+            case "O+" :
+                String selectionOP = DatabaseContract.Profile.COLUMN_BLOOD_TYPE + " IN(?,?)" ;
+                String[] selectionArgsOP = {"O+","O-"};
+                mdb.donorGetter(selectionOP,selectionArgsOP);
+                break;
+
+            case "B+" :
+                String selectionBP = DatabaseContract.Profile.COLUMN_BLOOD_TYPE + " IN(?,?,?,?)" ;
+                String[] selectionArgsBP = {"O+","O-" , "B+", "B-"};
+                mdb.donorGetter(selectionBP,selectionArgsBP);
+                break;
+
+            case "AB+" :
+                String selectionABP = null ;
+                String[] selectionArgsABP = null;
+                mdb.donorGetter(selectionABP,selectionArgsABP);
+                break;
+            case "A-" :
+                String selectionAM = DatabaseContract.Profile.COLUMN_BLOOD_TYPE + " IN(?,?)" ;
+                String[] selectionArgsAM= { "A-" , "O-"};
+                mdb.donorGetter(selectionAM,selectionArgsAM);
+                break;
+            case "O-" :
+                String selectionOM = DatabaseContract.Profile.COLUMN_BLOOD_TYPE + " =?" ;
+                String[] selectionArgsOM = {"O-"};
+                mdb.donorGetter(selectionOM,selectionArgsOM);
+                break;
+
+            case "B-" :
+                String selectionBM = DatabaseContract.Profile.COLUMN_BLOOD_TYPE + " IN(?,?)" ;
+                String[] selectionArgsBM = {"O-" , "B-"};
+                mdb.donorGetter(selectionBM,selectionArgsBM);
+                break;
+
+            case "AB-" :
+                String selectionABM = DatabaseContract.Profile.COLUMN_BLOOD_TYPE + " IN(?,?,?,?)" ;
+                String[] selectionArgsABM = {"AB-","A-" , "B-", "O-"};
+                mdb.donorGetter(selectionABM,selectionArgsABM);
+                break;
+
+
+
+        }
+
+
+
+    }
 
 
 

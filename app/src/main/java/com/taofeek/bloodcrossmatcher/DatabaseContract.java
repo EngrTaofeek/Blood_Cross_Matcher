@@ -29,12 +29,12 @@ public class DatabaseContract {
         public static final String SQL_CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " (" +
                 _ID + " INTEGER PRIMARY KEY, " +
                 COLUMN_EMAIL + " TEXT UNIQUE NOT NULL, "  +
-                COLUMN_NAME + " , " +
-                COLUMN_AGE + " , " +
-                COLUMN_GENDER + " , " +
+                COLUMN_NAME + ", " +
+                COLUMN_AGE + ", " +
+                COLUMN_GENDER + ", " +
                 COLUMN_BLOOD_TYPE + " TEXT NOT NULL, " +
-                COLUMN_STATUS + " , " +
-                COLUMN_NUMBER + " " + ")" ;
+                COLUMN_STATUS + ", " +
+                COLUMN_NUMBER  + " )" ;
 
 
 

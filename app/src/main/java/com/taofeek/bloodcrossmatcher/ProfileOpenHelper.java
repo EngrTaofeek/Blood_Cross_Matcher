@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class ProfileOpenHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "bloodmatcher.db";
-    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "bloodmatcherprofile.db";
+    public static final int DATABASE_VERSION = 4;
     private final Context context;
 
     public ProfileOpenHelper(Context context) {
@@ -22,7 +22,7 @@ public class ProfileOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DatabaseContract.Profile.SQL_CREATE_TABLE);
-        preLoadedData();
+        //preLoadedData();
 
     }
      public void insertData(String name, String email , String number , String age , String blood_type,
@@ -58,6 +58,10 @@ public class ProfileOpenHelper extends SQLiteOpenHelper {
                 "29" , "B-" , "donor" ,"male");
         insertData("Sarah","balogun.sarah@gmail.com","08026703475" ,
                 "23" , "AB-" , "donor" ,"female");
+
+     }
+     public void donorGetter(String selection, String[] selectionArgs){
+
 
      }
 

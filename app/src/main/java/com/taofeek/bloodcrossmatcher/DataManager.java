@@ -29,6 +29,7 @@ public class DataManager extends AppCompatActivity {
         long newRowId = db.insert(DatabaseContract.Authentication.TABLE_NAME, null, values);
 
     }
+
     public boolean loginCheck(String loginmail, String loginPassword){
         //mdb.onCreate(db);
         //mdb = new OpenHelper(this);

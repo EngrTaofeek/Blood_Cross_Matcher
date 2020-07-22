@@ -54,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void logCheck() {
         //DataManager dm =new DataManager();
+        loginEmail = findViewById(R.id.login_email);
+        loginPassword = findViewById(R.id.login_password);
+
+        mLoginemail =  getText(loginEmail);
+        mLoginpassword = getText(loginPassword);
+
         OpenHelper mdb = new OpenHelper(this);
         Boolean checkstat = mdb.loginCheck(mLoginemail,mLoginpassword);
         if (checkstat){

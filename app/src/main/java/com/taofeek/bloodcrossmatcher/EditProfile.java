@@ -91,6 +91,9 @@ public class EditProfile extends AppCompatActivity implements AdapterView.OnItem
         mReceiver = findViewById(R.id.radioButtonReceiver);
         String gender = "Male";
         String status = "Receiver";
+        Profile pf = new Profile();
+        pf.bloodmatcher(blood_group);
+
 
         ProfileOpenHelper mdb = new ProfileOpenHelper(this);
         mdb.insertData(name,email,number,age,blood_group,status,gender);
