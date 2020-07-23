@@ -43,6 +43,7 @@
     <string name="gender">Gender</string>
     <string name="status">Status</string>
     <string name="submit">SUBMIT</string>
+    <string name="availabledonortext">Suitable Donors</string>
 
     <string-array name="spinner_array">
         <item>A+</item>
