@@ -2,6 +2,7 @@ package com.taofeek.bloodcrossmatcher;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -9,7 +10,7 @@ import androidx.annotation.Nullable;
 
 public class ProfileOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "bloodmatcherprofile.db";
-    public static final int DATABASE_VERSION = 4;
+    public static final int DATABASE_VERSION = 5;
     private final Context context;
 
     public ProfileOpenHelper(Context context) {
@@ -61,6 +62,28 @@ public class ProfileOpenHelper extends SQLiteOpenHelper {
 
      }
      public void donorGetter(String selection, String[] selectionArgs){
+
+        String[] projection = {DatabaseContract.Profile.COLUMN_NAME,
+                                DatabaseContract.Profile.COLUMN_EMAIL,
+                                DatabaseContract.Profile.COLUMN_BLOOD_TYPE};
+
+         ProfileOpenHelper mdb = new ProfileOpenHelper(context);
+         SQLiteDatabase db = mdb.getReadableDatabase();
+         Cursor cursor = db.query(
+                 DatabaseContract.Profile.TABLE_NAME,   // The table to query
+                 projection,             // The array of columns to return (pass null to get all)
+                 selection,              // The columns for the WHERE clause
+                 selectionArgs,          // The values for the WHERE clause
+                 null,                   // don't group the rows
+                 null,                   // don't filter by row groups
+                 null               // The sort order
+         );
+         boolean more = cursor.moveToFirst();
+         while(more) {
+             RecyclerAdapter adaptercursor = new RecyclerAdapter(context,cursor);
+             more = cursor.moveToNext();
+         }
+
 
 
      }

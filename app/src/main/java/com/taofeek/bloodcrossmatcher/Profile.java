@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -22,6 +23,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class Profile extends AppCompatActivity {
+    Button mDonateButton;
+    Button mReceiveButton;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -72,6 +75,15 @@ public class Profile extends AppCompatActivity {
                 return true;
             }
         });
+        mReceiveButton = findViewById(R.id.button_receive);
+        mReceiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this,ReceiverDisplay.class);
+                startActivity(intent);
+            }
+        });
+
           }
     public void bloodmatcher (String bloodgroup) {
         ProfileOpenHelper mdb = new ProfileOpenHelper(this);

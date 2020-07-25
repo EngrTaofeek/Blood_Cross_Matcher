@@ -74,6 +74,7 @@ public class EditProfile extends AppCompatActivity implements AdapterView.OnItem
 
     }
     public void getText (){
+        ProfileOpenHelper mdb = new ProfileOpenHelper(this);
         mAge = findViewById(R.id.edit_profile_age);
         String age = getEditText(mAge);
         mEmail = findViewById(R.id.edit_profile_email);
@@ -95,7 +96,7 @@ public class EditProfile extends AppCompatActivity implements AdapterView.OnItem
         pf.bloodmatcher(blood_group);
 
 
-        ProfileOpenHelper mdb = new ProfileOpenHelper(this);
+        //ProfileOpenHelper mdb = new ProfileOpenHelper(this);
         mdb.insertData(name,email,number,age,blood_group,status,gender);
 
 
