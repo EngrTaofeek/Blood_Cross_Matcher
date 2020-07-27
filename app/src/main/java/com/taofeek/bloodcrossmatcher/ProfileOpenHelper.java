@@ -12,6 +12,7 @@ public class ProfileOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "bloodmatcherprofile.db";
     public static final int DATABASE_VERSION = 5;
     private final Context context;
+    private ProfileOpenHelper mMdb;
 
     public ProfileOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -28,9 +29,9 @@ public class ProfileOpenHelper extends SQLiteOpenHelper {
     }
      public void insertData(String name, String email , String number , String age , String blood_type,
                             String status , String gender ){
-         ProfileOpenHelper mdb = new ProfileOpenHelper(context);
+         mMdb = new ProfileOpenHelper(context);
 
-         SQLiteDatabase db = mdb.getReadableDatabase();
+         SQLiteDatabase db = mMdb.getReadableDatabase();
          ContentValues values = new ContentValues();
          values.put(DatabaseContract.Profile.COLUMN_EMAIL, email);
          values.put(DatabaseContract.Profile.COLUMN_NAME, name);
@@ -67,8 +68,8 @@ public class ProfileOpenHelper extends SQLiteOpenHelper {
                                 DatabaseContract.Profile.COLUMN_EMAIL,
                                 DatabaseContract.Profile.COLUMN_BLOOD_TYPE};
 
-         ProfileOpenHelper mdb = new ProfileOpenHelper(context);
-         SQLiteDatabase db = mdb.getReadableDatabase();
+         mMdb = new ProfileOpenHelper(context);
+         SQLiteDatabase db = mMdb.getReadableDatabase();
          Cursor cursor = db.query(
                  DatabaseContract.Profile.TABLE_NAME,   // The table to query
                  projection,             // The array of columns to return (pass null to get all)

@@ -4,7 +4,7 @@
     <string name="email_hint">Enter your email address</string>
     <string name="password_hint_text">Enter your password</string>
     <string name="login_text">LOGIN</string>
-    <string name="sign_up_text">Click to Sign up</string>
+    <string name="sign_up_text">Do not have an account?Click to Sign up</string>
     <string name="welcome_signup_text">Welcome to Blood Cross Matcher</string>
     <string name="fill_details">Fill in your account details</string>
     <string name="name_hint">Enter your full name</string>
@@ -15,8 +15,8 @@
     <string name="title_activity_profile">Profile</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Blood Cross Matcher</string>
+    <string name="nav_header_subtitle">bloodcrossmatcher@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -44,6 +44,7 @@
     <string name="status">Status</string>
     <string name="submit">SUBMIT</string>
     <string name="availabledonortext">Suitable Donors</string>
+    <string name="motivattext">Your favourite mobile blood bank</string>
 
     <string-array name="spinner_array">
         <item>A+</item>

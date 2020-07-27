@@ -21,4 +21,5 @@ public class ReceiverDisplay extends AppCompatActivity {
         recyclerView.setAdapter(recyclerAdapter);
 
     }
+
 }
